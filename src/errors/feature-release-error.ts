@@ -1,4 +1,4 @@
-import { WonStdError } from 'src/errors/won-std-error';
+import { WonStdError } from './won-std-error';
 
 enum Code {
   ERROR_ALREADY_INITIALIZED = 'ERROR_ALREADY_INITIALIZED',

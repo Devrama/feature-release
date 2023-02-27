@@ -1,7 +1,7 @@
-import { FeatureReleaseError } from 'src/errors/feature-release-error';
-import { setDebugMode } from 'src/helpers/logger';
-import { FeatureRelease } from 'src/lib/feature-release';
-import { FeatureReleaseConfig } from 'src/types';
+import { FeatureReleaseError } from './errors/feature-release-error';
+import { setDebugMode } from './helpers/logger';
+import { FeatureRelease } from './lib/feature-release';
+import { FeatureReleaseConfig } from './types';
 
 let featureFlagInstance: FeatureRelease;
 

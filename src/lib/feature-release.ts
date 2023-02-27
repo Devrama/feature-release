@@ -1,15 +1,15 @@
 import axios, { AxiosError } from 'axios';
 import crypto from 'crypto';
-import { FeatureReleaseError } from 'src/errors/feature-release-error';
-import { printLog } from 'src/helpers/logger';
+import { ZodError } from 'zod';
+import { FeatureReleaseError } from '../errors/feature-release-error';
+import { printLog } from '../helpers/logger';
 import {
   FeatureReleaseConfig,
   FeatureReleaseOptions,
   NamespacedRule,
   Rule,
-} from 'src/types';
-import { featureReleaseConfigSchema } from 'src/types-zod';
-import { ZodError } from 'zod';
+} from '../types';
+import { featureReleaseConfigSchema } from '../types-zod';
 
 export class FeatureRelease {
   private featureReleaseConfig: FeatureReleaseConfig;
