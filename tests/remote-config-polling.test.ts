@@ -4,7 +4,7 @@ import { delay } from './helpers';
 
 jest.useFakeTimers({ advanceTimers: true });
 
-it('todo', async () => {
+it('can pull the configuration from a remote server', async () => {
   const config1 = {
     someFeatureFlag: {
       someTestFeatureFlag: {
