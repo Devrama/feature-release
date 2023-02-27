@@ -2,6 +2,9 @@
 
 A simple feature flag management without hassle
 
+- Release by percentage
+- Release by individual targets
+
 # How to use?
 
 ## Simple usage by percentage release
@@ -123,7 +126,7 @@ const featureRelease = initFeatureRelease({
   mySecondFeatureFlag: {
     individualTargets: {
       'foo@example.com': false,
-      'foo@example.com': false,
+      'bar@example.com': false,
     },
     releaseByPercentage: 100,
   },
@@ -208,6 +211,24 @@ function newFeatureImplementation1(userID, environment, region) {
 ## Remote configuration
 
 You can also pull the configuration from a remote server. There is also an option that pulls the configuration periodically. In this way, you are able to change the configuration remotely without restarting your application.
+
+```json
+// https://example.com/remote-config.json
+{
+  "myFirstFeatureFlag": {
+    "individualTargets": {
+      "10001": true,
+      "10002": true
+    }
+  },
+  "mySecondFeatureFlag": {
+    "individualTargets": {
+      "foo@example.com": true,
+      "bar@example.com": true
+    }
+  }
+}
+```
 
 ```typescript
 /* my-feature-release.js */
