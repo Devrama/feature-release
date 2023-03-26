@@ -1,9 +1,6 @@
 {
   "name": "feature-release",
-  "version": "0.0.3",
-  "engines": {
-    "node": ">=18.14.0"
-  },
+  "version": "0.0.4",
   "description": "A simple feature flag management without hassle",
   "scripts": {
     "prepare": "husky install",
